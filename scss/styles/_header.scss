@@ -74,7 +74,7 @@ header {
                         display: block;
                         position: absolute;
                         height: 2px;
-                        background-color: #454138;
+                        background-color: $secondColor;
                         transform: translate(-50%, -50%);
                         left: 50%;
                         bottom: -9px;
@@ -89,7 +89,7 @@ header {
                         display: block;
                         position: absolute;
                         height: 2px;
-                        background-color: #454138;
+                        background-color: $secondColor;
                         transform: translate(-50%, -50%);
                         left: 50%;
                         top: -5px;
@@ -100,7 +100,7 @@ header {
                     }
 
                     &:hover {
-                        color: #454138;
+                        color: $secondColor;
 
                         &::after {
                             opacity: 1;
@@ -133,7 +133,7 @@ header {
 
                 &.active {
                     .line {
-                        background-color: #454138;
+                        background-color: $secondColor;
 
                         &:nth-child(1) {
                             transform: translateY(8px) rotate(45deg);

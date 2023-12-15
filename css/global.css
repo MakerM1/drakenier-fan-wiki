@@ -335,4 +335,141 @@ header .right-side nav .hamburger-menu.active .line:nth-child(2) {
 }
 header.active {
   border-radius: 0;
+}
+
+main {
+  margin-top: 100px;
+}
+main .games-section {
+  padding: 10px;
+}
+main .games-section .main-container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid rgb(194, 189, 163);
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+main .games-section .main-container .title-container {
+  margin-bottom: 40px;
+  background-color: #454138;
+  padding: 10px;
+  border-radius: 20px;
+}
+main .games-section .main-container .title-container h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+main .games-section .main-container .title-container h5 {
+  font-size: 13px;
+  color: rgb(172, 172, 172);
+  font-weight: 600;
+}
+main .games-section .main-container .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+main .games-section .main-container .img-container::-webkit-scrollbar {
+  width: 0;
+}
+main .games-section .main-container .img-container .draken {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  scroll-snap-align: center;
+}
+main .games-section .main-container .img-container .draken img {
+  width: 300px;
+  cursor: pointer;
+}
+main .games-section .main-container .img-container .nier {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  scroll-snap-align: center;
+}
+main .games-section .main-container .img-container .nier img {
+  width: 300px;
+  cursor: pointer;
+}
+main .games-section .main-container .dots {
+  font-size: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .games-section .main-container .dots i {
+  color: gray;
+  margin-right: 5px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+main .games-section .main-container .dots i.active {
+  color: white;
+}
+main .games-section .main-container .dots .arrow {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+main .games-section .main-container .dots .arrow.active {
+  opacity: 1;
+  visibility: visible;
+}
+main .games-section .main-container .dots .arrow:hover {
+  background-color: rgba(230, 230, 230, 0.215);
 }/*# sourceMappingURL=global.css.map */

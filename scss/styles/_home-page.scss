@@ -1,0 +1,120 @@
+main {
+    margin-top: 100px;
+
+    .games-section {
+        padding: 10px;
+
+        .main-container {
+            @include container (1300px);
+            border: 2px solid $mainColor;
+            border-radius: 30px;
+            color: white;
+            text-align: center;
+            padding: 20px;
+
+            .title-container {
+                margin-bottom: 40px;
+                background-color: $secondColor;
+                padding: 10px;
+                border-radius: 20px;
+
+                h1 {
+                    font-size: 30px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+
+                h5 {
+                    font-size: 13px;
+                    color: rgb(172, 172, 172);
+                    font-weight: 600;
+                }
+            }
+
+            .img-container {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-bottom: 10px;
+                flex-wrap: nowrap;
+                overflow: auto;
+                scroll-snap-type: x mandatory;
+
+                &::-webkit-scrollbar {
+                    width: 0;
+                }
+
+                .draken {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    flex-shrink: 0;
+                    scroll-snap-align: center;
+
+                    img {
+                        width: 300px;
+                        cursor: pointer;
+                    }
+                }
+
+                .nier {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100%;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    flex-shrink: 0;
+                    scroll-snap-align: center;
+
+                    img {
+                        width: 300px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .dots {
+                font-size: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    color: gray;
+                    margin-right: 5px;
+                    transition: all 0.2s;
+
+                    &.active {
+                        color: white;
+                    }
+                }
+
+                .arrow {
+                    font-size: 20px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    padding: 6px;
+                    border-radius: 50%;
+                    transition: all 0.2s;
+                    opacity: 0;
+                    visibility: hidden;
+
+                    &.active {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    &:hover {
+                        background-color: rgba(230, 230, 230, 0.215);
+                    }
+                }
+            }
+        }
+    }
+}
