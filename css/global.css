@@ -407,9 +407,11 @@ main .games-section .main-container .img-container .draken {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   scroll-snap-align: center;
+  margin-right: 50px;
 }
 main .games-section .main-container .img-container .draken img {
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   cursor: pointer;
 }
 main .games-section .main-container .img-container .nier {
@@ -429,7 +431,8 @@ main .games-section .main-container .img-container .nier {
   scroll-snap-align: center;
 }
 main .games-section .main-container .img-container .nier img {
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   cursor: pointer;
 }
 main .games-section .main-container .dots {
