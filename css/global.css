@@ -138,8 +138,24 @@ a {
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  height: 100%;
+}
+
 body {
   background-color: rgb(15, 15, 15);
+  font-family: Arial, Helvetica, sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(194, 189, 163);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #454138;
 }
 
 header {
@@ -160,6 +176,7 @@ header {
           justify-content: space-between;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  z-index: 100000;
 }
 header .left-side {
   display: -webkit-box;
@@ -309,7 +326,6 @@ header .right-side nav .hamburger-menu.active .line:nth-child(2) {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    bottom: -150px;
     background-color: rgb(194, 189, 163);
     left: 0;
     right: 0;
@@ -319,7 +335,7 @@ header .right-side nav .hamburger-menu.active .line:nth-child(2) {
     height: auto;
     z-index: -1;
     border-radius: 0 0 50px 50px;
-    bottom: 100px;
+    bottom: 50px;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all 0.3s;
@@ -342,6 +358,7 @@ main {
 }
 main .games-section {
   padding: 10px;
+  margin-bottom: 50px;
 }
 main .games-section .main-container {
   max-width: 1300px;
@@ -388,9 +405,10 @@ main .games-section .main-container .img-container {
   overflow: auto;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 main .games-section .main-container .img-container::-webkit-scrollbar {
-  width: 0;
+  display: none;
 }
 main .games-section .main-container .img-container .draken {
   display: -webkit-box;
@@ -475,4 +493,175 @@ main .games-section .main-container .dots .arrow.active {
 }
 main .games-section .main-container .dots .arrow:hover {
   background-color: rgba(230, 230, 230, 0.215);
+}
+main .characters-section {
+  padding: 10px;
+}
+main .characters-section .characters-main-container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid rgb(194, 189, 163);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+}
+main .characters-section .characters-main-container .title {
+  margin-bottom: 40px;
+  background-color: #454138;
+  padding: 10px;
+  border-radius: 20px;
+}
+@media (max-width: 533px) {
+  main .characters-section .characters-main-container .title {
+    margin-bottom: 20px;
+  }
+}
+main .characters-section .characters-main-container .title h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+main .characters-section .characters-main-container .title h5 {
+  font-size: 13px;
+  color: rgb(172, 172, 172);
+  font-weight: 600;
+}
+main .characters-section .characters-main-container .game-select {
+  border-bottom: 2px solid gray;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .characters-section .characters-main-container .game-select .dot {
+  width: 10px;
+  height: 5px;
+  background-color: gray;
+  border-radius: 50%;
+}
+@media (max-width: 533px) {
+  main .characters-section .characters-main-container .game-select .dot {
+    display: none;
+  }
+}
+main .characters-section .characters-main-container .game-select ul {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+@media (max-width: 533px) {
+  main .characters-section .characters-main-container .game-select ul {
+    display: none;
+  }
+}
+main .characters-section .characters-main-container .game-select ul li {
+  color: gray;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+main .characters-section .characters-main-container .game-select ul li:hover {
+  color: white;
+}
+main .characters-section .characters-main-container .game-select ul li::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgb(194, 189, 163);
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  display: none;
+}
+@media (max-width: 798px) {
+  main .characters-section .characters-main-container .game-select ul li {
+    margin-bottom: 20px;
+  }
+}
+main .characters-section .characters-main-container .game-select ul li.active {
+  color: rgb(194, 189, 163);
+}
+main .characters-section .characters-main-container .game-select ul li.active::after {
+  display: inline-block;
+}
+main .characters-section .characters-main-container .game-select #game-option {
+  color: rgb(194, 189, 163);
+  background-color: rgb(19, 19, 19);
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  font-weight: 600;
+  border: 2px solid rgb(194, 189, 163);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../imgs/arrow.svg");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  display: none;
+  margin-bottom: 10px;
+}
+@media (max-width: 533px) {
+  main .characters-section .characters-main-container .game-select #game-option {
+    display: inline-block;
+  }
+}
+main .characters-section .characters-main-container .characters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+main .characters-section .characters-main-container .characters .character {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+main .characters-section .characters-main-container .characters .character:hover {
+  background-color: rgb(19, 19, 19);
+}
+main .characters-section .characters-main-container .characters .character img {
+  max-width: 160px;
+  width: 100%;
+  height: 182px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 10px;
+}
+main .characters-section .characters-main-container .characters .character p {
+  color: rgb(194, 189, 163);
+  font-weight: 600;
+}
+main .characters-section .characters-main-container .more a {
+  color: #454138;
+  text-decoration: none;
+  cursor: pointer;
+}
+main .characters-section .characters-main-container .more a:hover {
+  text-decoration: underline;
+  color: #655f52;
 }/*# sourceMappingURL=global.css.map */

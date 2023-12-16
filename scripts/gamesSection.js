@@ -13,17 +13,6 @@ function arrowMove(arrowDirectionActive, arrowDirection, number1, number2) {
     circles[number2].classList.add('active')
 }
 
-arrowRight.addEventListener('click', () => {
-    arrowMove(arrowRight, arrowLeft, 0, 1)
-    nier.scrollIntoView({behavior: "smooth", block: "start"})
-})
-
-arrowLeft.addEventListener('click', () => {
-    arrowMove(arrowLeft, arrowRight, 1, 0)
-    drakengard.scrollIntoView({behavior: "smooth", block: "start"})
-
-})
-
 mainContainer.onscroll = () => {
     if (mainContainer.scrollLeft >= (mainContainer.scrollWidth / 4)) {
         arrowMove(arrowRight, arrowLeft, 0, 1)
@@ -33,3 +22,32 @@ mainContainer.onscroll = () => {
         seriesName.innerHTML = 'Drakengard'
     }
 }
+
+arrowRight.addEventListener('click', () => {
+    arrowMove(arrowRight, arrowLeft, 0, 1)
+    mainContainer.scrollLeft = mainContainer.scrollWidth
+})
+
+arrowLeft.addEventListener('click', () => {
+    arrowMove(arrowLeft, arrowRight, 1, 0)
+    mainContainer.scrollLeft = 0
+
+})
+
+// characters section
+
+const gameOptions = document.querySelectorAll('.game-option')
+
+gameOptions.forEach((game) => {
+    game.addEventListener('click', () => {
+        for (let i = 0; i < gameOptions.length; i++) {
+            if (gameOptions[i].classList.contains('active')) {
+                gameOptions[i].classList.remove('active')
+            }
+
+            if (!gameOptions[i].classList.contains('active')) {
+                game.classList.add('active')
+            }
+        }
+    })
+})
