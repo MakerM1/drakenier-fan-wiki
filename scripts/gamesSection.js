@@ -155,7 +155,7 @@ gameOptions.forEach((game) => {
     })
 })
 
-gameSelect.addEventListener('click', () => {
+gameSelect.onchange = () => {
     if (gameSelect.value === 'Drakengard') {
         charactersTab.innerHTML = drakengard1Html
     } else if (gameSelect.value === 'Drakengard2') {
@@ -174,5 +174,4 @@ gameSelect.addEventListener('click', () => {
         charactersTab.innerHTML = nier3html
     }
 
-    console.log(gameSelect.value)
-})
+}

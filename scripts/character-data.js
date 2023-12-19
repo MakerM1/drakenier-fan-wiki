@@ -86,7 +86,7 @@ export const chaaractersDraken2 = [
 
 export const drakengard3 = [
     {
-        imgSrcDraken3: 'imgs/character-arts/zero-character-art.webp',
+        imgSrcDraken3: 'imgs/character-arts/Zero-character-art.webp',
         draken3Alt: 'Zero character art',
         draken3Name: 'Zero'
     },
