@@ -38,6 +38,10 @@ arrowLeft.addEventListener('click', () => {
 
 import { charactersDraken1 } from "./character-data.js"
 import { chaaractersDraken2 } from "./character-data.js"
+import { drakengard3 } from "./character-data.js"
+import { nier1 } from "./character-data.js"
+import { nier2 } from "./character-data.js"
+import { nier3 } from "./character-data.js"
 
 const gameOptions = document.querySelectorAll('.game-option')
 
@@ -45,6 +49,10 @@ const charactersTab = document.querySelector('.characters')
 
 let  drakengard1Html = ``;
 let drakengard2Html = ``;
+let drakengard3Html = ``;
+let nier1Html = ``;
+let nier2html = ``;
+let nier3html = ``
 
 charactersDraken1.forEach((character) => {
     drakengard1Html += `
@@ -68,6 +76,50 @@ chaaractersDraken2.forEach((character) => {
 </div>`
 })
 
+drakengard3.forEach((character) => {
+    drakengard3Html += `
+    <div class="character">
+    <img
+    src="${character.imgSrcDraken3}"
+    alt="${character.draken3Alt}"
+    />
+    <p>${character.draken3Name}</p>
+</div>`
+})
+
+nier1.forEach((character) => {
+    nier1Html += `
+    <div class="character">
+    <img
+    src="${character.nier1ImgSrc}"
+    alt="${character.nier1Alt}"
+    />
+    <p>${character.nier1Name}</p>
+</div>`
+})
+
+nier2.forEach((character) => {
+    nier2html += `
+    <div class="character">
+    <img
+    src="${character.nier2ImgSrc}"
+    alt="${character.nier2Alt}"
+    />
+    <p>${character.nier2Name}</p>
+</div>`
+})
+
+nier3.forEach((character) => {
+    nier3html += `
+    <div class="character">
+    <img
+    src="${character.nier3ImgSrc}"
+    alt="${character.nier3Alt}"
+    />
+    <p>${character.nier3Name}</p>
+</div>`
+})
+
 charactersTab.innerHTML = drakengard1Html
 
 const gameSelect = document.getElementById('game-option')
@@ -86,8 +138,19 @@ gameOptions.forEach((game) => {
 
         if (gameOptions[0].classList.contains('active')) {
             charactersTab.innerHTML = drakengard1Html
-        } else if (gameOptions[1].classList.contains('active') || gameSelect.value === 'Drakengard2') {
+        } else if (gameOptions[1].classList.contains('active') ) {
             charactersTab.innerHTML = drakengard2Html
+        } else if (gameOptions[2].classList.contains('active')) {
+            charactersTab.innerHTML = drakengard3Html
+        }
+        else if (gameOptions[3].classList.contains('active')) {
+            charactersTab.innerHTML = nier1Html
+        }
+        else if (gameOptions[4].classList.contains('active')) {
+            charactersTab.innerHTML = nier2html
+        }
+        else if (gameOptions[5].classList.contains('active')) {
+            charactersTab.innerHTML = nier3html
         }
     })
 })
@@ -98,4 +161,18 @@ gameSelect.addEventListener('click', () => {
     } else if (gameSelect.value === 'Drakengard2') {
         charactersTab.innerHTML = drakengard2Html
     }
+    else if (gameSelect.value === 'Drakengard3') {
+        charactersTab.innerHTML = drakengard3Html
+    }
+    else if (gameSelect.value === 'nier1') {
+        charactersTab.innerHTML = nier1Html
+    }
+    else if (gameSelect.value === 'nier2') {
+        charactersTab.innerHTML = nier2html
+    }
+    else if (gameSelect.value === 'nier3') {
+        charactersTab.innerHTML = nier3html
+    }
+
+    console.log(gameSelect.value)
 })
