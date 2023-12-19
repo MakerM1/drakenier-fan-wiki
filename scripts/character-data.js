@@ -68,7 +68,7 @@ export const chaaractersDraken2 = [
         draken2Name: 'Gismor'
     }, 
     {
-        imgSrcDraken2: 'imgs/character-arts/zhangpo-character-art.png',
+        imgSrcDraken2: 'imgs/character-arts/Zhangpo-character-art.png',
         draken2Alt: 'Zhangpo character art',
         draken2Name: 'Zhangpo'
     },
@@ -192,7 +192,7 @@ export const nier2 = [
         nier2Name: '9S'
     },
     {
-        nier2ImgSrc: 'imgs/character-arts/A2-character-art.webp',
+        nier2ImgSrc: 'imgs/character-arts/a2-character-art.webp',
         nier2Alt: 'a2 character art',
         nier2Name: 'A2'
     },
