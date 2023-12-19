@@ -152,14 +152,14 @@ body::-webkit-scrollbar {
   width: 10px;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(194, 189, 163);
+  background-color: #c2bda3;
 }
 body::-webkit-scrollbar-thumb:hover {
   background-color: #454138;
 }
 
 header {
-  background-color: rgb(194, 189, 163);
+  background-color: #c2bda3;
   position: fixed;
   left: 0;
   right: 0;
@@ -326,7 +326,7 @@ header .right-side nav .hamburger-menu.active .line:nth-child(2) {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: rgb(194, 189, 163);
+    background-color: #c2bda3;
     left: 0;
     right: 0;
     max-width: 10000px;
@@ -364,7 +364,7 @@ main .games-section .main-container {
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
-  border: 2px solid rgb(194, 189, 163);
+  border: 2px solid #c2bda3;
   border-radius: 30px;
   color: white;
   text-align: center;
@@ -501,7 +501,7 @@ main .characters-section .characters-main-container {
   max-width: 1300px;
   width: 100%;
   margin: 0 auto;
-  border: 2px solid rgb(194, 189, 163);
+  border: 2px solid #c2bda3;
   padding: 20px;
   text-align: center;
   color: white;
@@ -582,7 +582,7 @@ main .characters-section .characters-main-container .game-select ul li::after {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: rgb(194, 189, 163);
+  background-color: #c2bda3;
   position: absolute;
   left: 0;
   bottom: -12px;
@@ -594,19 +594,19 @@ main .characters-section .characters-main-container .game-select ul li::after {
   }
 }
 main .characters-section .characters-main-container .game-select ul li.active {
-  color: rgb(194, 189, 163);
+  color: #c2bda3;
 }
 main .characters-section .characters-main-container .game-select ul li.active::after {
   display: inline-block;
 }
 main .characters-section .characters-main-container .game-select #game-option {
-  color: rgb(194, 189, 163);
+  color: #c2bda3;
   background-color: rgb(19, 19, 19);
   padding: 10px;
   border-radius: 10px;
   outline: none;
   font-weight: 600;
-  border: 2px solid rgb(194, 189, 163);
+  border: 2px solid #c2bda3;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -633,6 +633,11 @@ main .characters-section .characters-main-container .characters {
   padding: 10px;
   margin-bottom: 20px;
 }
+@media (max-width: 385px) {
+  main .characters-section .characters-main-container .characters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 main .characters-section .characters-main-container .characters .character {
   padding: 10px;
   text-align: center;
@@ -653,7 +658,7 @@ main .characters-section .characters-main-container .characters .character img {
   margin-bottom: 10px;
 }
 main .characters-section .characters-main-container .characters .character p {
-  color: rgb(194, 189, 163);
+  color: #c2bda3;
   font-weight: 600;
 }
 main .characters-section .characters-main-container .more a {

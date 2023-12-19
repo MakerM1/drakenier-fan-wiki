@@ -36,7 +36,41 @@ arrowLeft.addEventListener('click', () => {
 
 // characters section
 
+import { charactersDraken1 } from "./character-data.js"
+import { chaaractersDraken2 } from "./character-data.js"
+
 const gameOptions = document.querySelectorAll('.game-option')
+
+const charactersTab = document.querySelector('.characters')
+
+let  drakengard1Html = ``;
+let drakengard2Html = ``;
+
+charactersDraken1.forEach((character) => {
+    drakengard1Html += `
+    <div class="character">
+    <img
+    src="${character.imgSrcDraken1}"
+    alt="${character.draken1Alt}"
+    />
+    <p>${character.draken1Name}</p>
+</div>`
+})
+
+chaaractersDraken2.forEach((character) => {
+    drakengard2Html += `
+    <div class="character">
+    <img
+    src="${character.imgSrcDraken2}"
+    alt="${character.draken2Alt}"
+    />
+    <p>${character.draken2Name}</p>
+</div>`
+})
+
+charactersTab.innerHTML = drakengard1Html
+
+const gameSelect = document.getElementById('game-option')
 
 gameOptions.forEach((game) => {
     game.addEventListener('click', () => {
@@ -49,5 +83,19 @@ gameOptions.forEach((game) => {
                 game.classList.add('active')
             }
         }
+
+        if (gameOptions[0].classList.contains('active')) {
+            charactersTab.innerHTML = drakengard1Html
+        } else if (gameOptions[1].classList.contains('active') || gameSelect.value === 'Drakengard2') {
+            charactersTab.innerHTML = drakengard2Html
+        }
     })
+})
+
+gameSelect.addEventListener('click', () => {
+    if (gameSelect.value === 'Drakengard') {
+        charactersTab.innerHTML = drakengard1Html
+    } else if (gameSelect.value === 'Drakengard2') {
+        charactersTab.innerHTML = drakengard2Html
+    }
 })
